@@ -1,63 +1,3 @@
-from math import sqrt
-from math import *
-from button import Button
-from graphics import *
-
-
-# 第一节：输入数据，并获取输入数据的平均值
-def getAverage():
-    count = 0
-    total = 0.0
-
-    strX = input("input x to stop or continue >>")
-    while (strX != ""):
-        x = float(strX)
-        total = total + x
-        count += 1
-
-        strX = input("input please: >>")
-    print("The average number is ", total / count)
-
-
-#  第二节：输入数据，获取输入数据的平均值，中间数，和标准差
-def getAverageEx():
-    numList = []
-
-    strX = input("input x to stop or continue >>")
-    while (strX != ""):
-        numList.append(float)
-        strX = input("input x to stop or continue >>")
-
-    total = 0.0
-    for a in numList:
-        total = total + a
-
-    length = len(numList)
-    average = total / length
-    print("平均值：" + average)
-
-    # 中间数
-    numList.sort()
-    midMin = 0
-    midMax = 0
-    midNum = 0.0
-    if (length % 2 == 0):
-        midMin = numList[length / 2 - 1]
-        midMax = numList[length / 2]
-        midNum = (midMax + midMin) / 2
-    else:
-        midMin = numList[length // 2]
-    print("中间值：" + midNum)
-
-    # 标准差
-    sunDev = 0.0
-    for a in numList:
-        temp = a - average
-        sunDev = sunDev + temp * temp
-    stdDev = sqrt(sunDev / length - 1)
-    print("标准差：" + stdDev)
-
-
 # 第五节：Python计算器（简单）
 class Calculator:
     def __init__(self):
@@ -118,13 +58,10 @@ class Calculator:
 
     def run(self):
         while True
-            key=self.getButton()
+            key = self.getButton()
             self.processButton(key)
-
-    if __name__ == '__main__':
-        theCac=Calculator()
-        theCac.run
 
 
 if __name__ == '__main__':
-    print("test")
+    theCac = Calculator()
+    theCac.run
